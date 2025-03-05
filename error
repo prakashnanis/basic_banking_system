@@ -1,0 +1,38 @@
+
+Processing category: recipe
+Traceback (most recent call last):
+  File "C:\Users\ThSu778\Desktop\Print_Perfect\meta.py", line 311, in <module>
+  File "C:\Users\ThSu778\Desktop\Print_Perfect\meta.py", line 270, in main
+  File "C:\Users\ThSu778\Desktop\Print_Perfect\meta.py", line 36, in process_link
+    parsed_url = urllib.parse.urlparse(link)
+  File "C:\Users\ThSu778\Desktop\Print_Perfect\nani\Lib\site-packages\playwright\sync_api\_generated.py", line 9018, in goto
+    self._sync(
+    ~~~~~~~~~~^
+        self._impl_obj.goto(
+        ^^^^^^^^^^^^^^^^^^^^
+            url=url, timeout=timeout, waitUntil=wait_until, referer=referer
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+    )
+    ^
+  File "C:\Users\ThSu778\Desktop\Print_Perfect\nani\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync 
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "C:\Users\ThSu778\Desktop\Print_Perfect\nani\Lib\site-packages\playwright\_impl\_page.py", line 551, in goto       
+    return await self._main_frame.goto(**locals_to_params(locals()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ThSu778\Desktop\Print_Perfect\nani\Lib\site-packages\playwright\_impl\_frame.py", line 145, in goto      
+    await self._channel.send("goto", locals_to_params(locals()))
+  File "C:\Users\ThSu778\Desktop\Print_Perfect\nani\Lib\site-packages\playwright\_impl\_connection.py", line 61, in send  
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    )
+    ^
+  File "C:\Users\ThSu778\Desktop\Print_Perfect\nani\Lib\site-packages\playwright\_impl\_connection.py", line 528, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Page.goto: Timeout 60000ms exceeded.
+Call log:
+  - navigating to "https://sallysbakingaddiction.com/apple-pie-recipe/", waiting until "networkidle"
+
